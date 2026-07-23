@@ -1,0 +1,30 @@
+{
+  "UseProjectDependencies": true,
+  "shell": "pwsh",
+  "useCompilerFolder": true,
+  "conditionalSettings": [
+    {
+      "workflows": [
+        "CI/CD"
+      ],
+      "settings": {
+        "workflowConcurrency": [
+          "group: ${{ github.workflow }}-${{ github.ref }}",
+          "cancel-in-progress: true"
+        ]
+      }
+    }
+  ],
+  "githubRunnerShell": "pwsh",
+  "incrementalBuilds": {
+    "onPush": true
+  },
+  "type": "PTE",
+  "MicrosoftTelemetryConnectionString": "",
+  "templateUrl": "https://github.com/businesscentralapps/tmp9qnm8h-PTE@main",
+  "githubRunner": "ubuntu-latest",
+  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/Actions/4f5f9c18698cb8791ebb77b5b5514a4fdd82b51b/.Modules/settings.schema.json",
+  "runs-on": "ubuntu-latest",
+  "useApproximateVersion": true,
+  "doNotPublishApps": true
+}
